@@ -1,0 +1,136 @@
+/* styles.css */
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    background: url('./Poke.gif') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centra verticalmente */
+    min-height: 100vh; /* Asegura que el body ocupe al menos toda la altura de la ventana */
+}
+
+/* Header Styles */
+.header-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#pageTitle, #subtitle {
+    font-family: 'Press Start 2P', cursive;
+    color: #FFCB05;
+    text-shadow: 2px 2px 0 #3C8DAD, 4px 4px 0 #F2F2F2;
+}
+
+/* Search Container Styles */
+.search-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 500px;
+    gap: 10px;
+    justify-content: center; /* Centra horizontalmente */
+}
+
+/* Input Styles */
+input {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #FFCB05;
+    border-radius: 15px;
+    background-color: #f8d5a3;
+    color: #333;
+    font-size: 16px;
+    font-family: 'Roboto Mono', monospace;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+input:focus {
+    border-color: #ffcb05;
+    background-color: #fff;
+    outline: none;
+}
+
+/* Button Styles */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    background-color: #ffcb05;
+    color: #000;
+    font-size: 16px;
+    font-family: 'Press Start 2P', cursive;
+    cursor: pointer;
+    transition: background-color 0.6s, box-shadow 0.6s;
+}
+
+button:hover {
+    background-color: #f4b800;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Pokémon Card Styles */
+.poke-card {
+    position: relative;
+    max-width: 300px;
+    width: 100%;
+    height: fit-content;
+    font-family: 'Roboto Mono', monospace;
+    border-radius: 15px;
+    color: #000;
+    text-align: center;
+    padding: 20px;
+    margin: 20px auto;
+    border: 5px solid #FFCB05;
+    background-color: #FFF;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.poke-card::before {
+    content: '';
+    background: radial-gradient(black 33%, transparent 33%);
+    background-size: 3px 3px;
+    border-radius: 15px;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    z-index: -1;
+}
+
+/* Image Container Styles */
+.img-container {
+    position: relative;
+    width: 180px;
+    margin: 10px auto;
+}
+
+.poke-img {
+    width: 180px;
+    border-radius: 50%;
+}
+
+/* Pokémon Types Styles */
+.poke-types div {
+    padding: 5px;
+    margin: 5px;
+    border-radius: 4px;
+    border: 1px dashed black;
+}
+
+/* Pokémon Stats Styles */
+.poke-stats div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    font-size: 18px;
+}
